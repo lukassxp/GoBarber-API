@@ -21,6 +21,8 @@ routes.post('/sessions', SessionController.store);
 
 routes.use(authMiddleware);
 
+routes.delete('/appointments/:id', AppointmentController.delete);
+
 routes.put('/users', UserController.update);
 routes.put('/notifications/:id', NotificationController.update);
 
